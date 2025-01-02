@@ -1,0 +1,22 @@
+
+#include <iostream>
+
+using namespace std;
+
+
+int calculamenor( int array_numeros[] , size_t tamanho_array ) {
+	int menor_valor = array_numeros[0];
+	for( int i = 1; i < tamanho_array; i++ ) {
+		if( menor_valor > array_numeros[i] ) {
+			menor_valor = array_numeros[i];
+		}
+	}
+	return menor_valor;
+}
+
+int main() {
+	int array[] = { 10, 1, 5, 9, 2 } ;
+	int tamanho_array = sizeof( array ) / sizeof( array[0] );
+	cout << " Menor valor : " << calculamenor( array , tamanho_array );
+	return 0;
+}
