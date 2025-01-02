@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std ;
+
+int main()
+{
+	int vetor_buffer[5] = { 9, 5, 7, 3, 1 };
+	int eleito, j;
+	
+	for ( int i = 1; i < 5; i++ )
+	{
+		eleito = vetor_buffer[ i ];
+		j = i - 1;
+	
+		while( j >= 0 && vetor_buffer[j] > eleito)
+		{
+			vetor_buffer[ j + 1 ] = vetor_buffer[j];
+			j = j - 1;		
+		}
+		
+		vetor_buffer[ j + 1 ] = eleito;
+	}
+			
+			
+	for( int i = 0; i < 5; i++ )
+	{
+		cout << i << " - " << vetor_buffer[i] << endl;
+	}
+
+
+	return 0;
+
+}
