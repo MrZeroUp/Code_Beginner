@@ -1,0 +1,10 @@
+def calculamenor( array_numeros ) :
+	menor_valor = array_numeros[0] ;
+	tamanho_array = len(array_numeros) ;
+	
+	for i in range( 1, tamanho_array ) :
+		if menor_valor > array_numeros[i] :
+			menor_valor = array_numeros[i] ;
+	return menor_valor ;
+	
+print ( " Menor valor : ", calculamenor ( [ 10, 1, 5, 9, 2 ] ) ) ;
